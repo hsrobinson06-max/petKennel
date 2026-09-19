@@ -1,14 +1,23 @@
+import angrycat from './assets/angrycat.jpeg';
+import angrydog from './assets/angrydog.jpeg';
+import happycat from './assets/happycat.jpg';
+import happydog from './assets/happydog.jpg';
+import hungrycat from './assets/hungrycat.jpg';
+import hungrydog from './assets/hungrydog.jpeg';
+
 export const initialData = [
   {
     id: 1,
-    name: "Baby Yoda",
-    status: "Hungry",
-    image: "https://some-url.com/sad-yoda.jpg"
+    name: "Dog",
+    status: ["Hungry", "Happy", "Angry"],
+    images: [hungrydog, happydog, angrydog],
+    currentIndex: 0
   },
   {
     id: 2,
-    name: "Mandalorian",
-    status: "Lost",
-    image: "https://some-url.com/lost-mando.jpg"
+    name: "Cat",
+    status: ["Hungry", "Happy", "Angry"],
+    images: [hungrycat, happycat, angrycat],
+    currentIndex: 0
   }
 ];
