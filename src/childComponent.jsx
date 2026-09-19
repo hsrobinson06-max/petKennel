@@ -1,27 +1,22 @@
 import React from 'react';
 
-// TODO: Destructure the props you need here (header, image, etc.)
 class ChildComponent extends React.Component {
-
   constructor(props) {
-   // todo add bindings etc to inititalize component and funcs 
-   super(props);
+    super(props);
   }
-  
-  render(){
-   return (
-    <div className="child-card">
-      {/* TODO: 
-        1. Add an <h2> for the header text 
-        2. Add an <img> tag for the image
-        3. Add a <p> tag for the content
-        4. Add a <button> that fires the click event
-      */}
-      
-      <button>Click Me</button>
-    </div>
-  );
- }
+
+  render() {
+    const { id, name, image, status, onAction } = this.props;
+
+    return (
+      <div className="child-card" style={{ border: '1px solid #ccc', padding: '16px', borderRadius: '8px' }}>
+        <h2>{name}</h2>
+        <img src={image} alt={name} style={{ width: '150px', height: '150px', objectFit: 'cover' }} />
+        <p>Status: {status}</p>
+        <button onClick={() => onAction(id)}>Click Me</button>
+      </div>
+    );
+  }
 }
 
 export default ChildComponent;
