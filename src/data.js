@@ -19,5 +19,13 @@ export const initialData = [
     status: ["Hungry", "Happy", "Angry"],
     images: [hungrycat, happycat, angrycat],
     currentIndex: 0
+  },
+  {
+    //setting up third pet
+    id: 3,
+    name: "pet3",
+    status: ["Hungry", "Happy", "Angry"],
+    images: [],
+    currentIndex: 0
   }
 ];
