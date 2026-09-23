@@ -25,6 +25,12 @@ class App extends Component {
 
     this.setState({ characters: updatedCharacters });
   }
+  //handler for the adopt me button
+  handleAdopt = id => {
+    //logic: filters out where if the ID is NOT the selected ID it is kept 
+    const updatedCharacters = this.state.characters.filter(char => char.id !== id);
+    this.setState({ characters: updatedCharacters});
+  }
 
   render() {
     return (
@@ -42,6 +48,8 @@ class App extends Component {
                 image={char.images ? char.images[idx] : ''}
                 status={char.status ? char.status[idx] : ''}
                 onAction={this.handleUpdate}
+                //assigns handler to button
+                adoptMe={this.handleAdopt}
               />
             );
           })}
